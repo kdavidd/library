@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="books-add">
+            <h1>BOOKS</h1>
+            <input type="text" class="name" placeholder="name">
+            <input type="text" class="author" placeholder="author">
+            <input type="number" class="pages" placeholder="pages">
+            <fieldset>
+                <input type="checkbox" id="read" name="read" class="read-checkbox">
+                <label for="read">Read already</label>
+            </fieldset>
+            <button class="submit-btn">Submit</button>
+        </div>
+        
+        <div class="books-show">
+            <div class="book-card">
+                <h2 class="book-name">Book name</h2>
+                <h3 class="book-pages">pages</h3>
+                <div class="book-card-bottom">
+                    <p class="book-author"><em>Author:</em></p>
+                    <p class="book-read">read/not read</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js" ></script>
+</html>
