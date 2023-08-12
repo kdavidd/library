@@ -1,0 +1,52 @@
+body {
+    background: url(/resources/bg.jpg);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: white;
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+.wrapper {
+    padding: 50px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+input[type='text'] {
+    padding: 5px 10px;
+
+    height: 40px;
+    width: 200px;
+    border-radius: 15px;
+    border: 2px solid rgb(209, 132, 69);
+    outline: none;
+    
+}
+input[type='text']:hover {
+    scale: 1.2;
+    transition: 0.7s;
+}
+.submit-btn {
+    height: 30px;
+    width: 100px;
+    border-radius: 15px;
+    border: none;
+}
+.submit-btn:hover {
+    scale: 1.2;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.books-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
