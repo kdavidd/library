@@ -1,29 +1,47 @@
-body {
-    background: url(/resources/bg.jpg);
+:root {
+    --orange: #f7b55e;
+    --orange-transparent: #f7b55e63: 
 }
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-h1 {
-    color: white;
-    font-size: 60px;
-    letter-spacing: 10px;
+body {
+    background: url(/resources/bg.jpg);
 }
 .wrapper {
     padding: 50px;
     height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 80px auto 1fr;
 }
-
+button.add-book-button {
+    cursor: pointer;
+    height: 60px;
+    width: 150px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+}
+.add-book-div {
+    display: flex;
+    justify-content: center;
+}
+button.add-book-button:hover {
+    background-color:var(--orange-transparent);
+    border-radius: 15px;
+    border: 2px solid var(--orange);
+    scale: 1.2;
+}
 input[type='text'], input[type='number'] {
     padding: 5px 10px;
     height: 40px;
     width: 200px;
     border-radius: 15px;
-    border: 2px solid #f7b55e;
+    border: 2px solid var(--orange);
     outline: none;
 }
 input[type='text']:hover, input[type='number']:hover {
@@ -50,7 +68,7 @@ fieldset label {
     font-size: 25px;
 }
 input[type='checkbox'] {
-    accent-color:  #f7b55e;
+    accent-color:  var(--orange);
 }
 .read-checkbox {
     height: 25px;
@@ -61,20 +79,18 @@ input[type='checkbox'] {
     width: 100px;
     border-radius: 15px;
     border: none;
-    border: 2px solid #f7b55e;
-    background-color: #f7b55e63;
+    border: 2px solid var(--orange);
+    background-color: var(--orange-transparent);
     color: white;
 }
 .submit-btn:hover {
     scale: 1.2;
     transition: 0.7s;
     cursor: pointer;
-    background-color: #f7b55e;
-
+    background-color: var(--orange);
 }
-
 .books-add {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -82,17 +98,16 @@ input[type='checkbox'] {
 .books-show {
     padding: 30px 0px;
     display: grid;
-    justify-content: center;
+    justify-content: start;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     gap: 40px
 }
-
 .book-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    border: 2px solid #f7b55e;
+    border: 2px solid var(--orange);
     border-radius: 15px;
     background-color: #f7b55e79;
     padding: 10px 20px;
@@ -104,7 +119,6 @@ input[type='checkbox'] {
     scale: 1.2;
     transition: 0.7s;
 }
-
 .book-card .book-name {
     display: flex;
     justify-content: center;
@@ -124,37 +138,34 @@ input[type='checkbox'] {
     align-items: center;
     width: 100%;
     overflow: hidden;
-    border-top: 1px solid #f7b55e ;
-    
+    border-top: 1px solid var(--orange) ;
 }
-
 .book-read-button {
     height: 30px;
-    border: 2px solid #f7b55e;
-    background-color: #f7b55e63;
+    border: 2px solid var(--orange);
+    background-color: var(--orange-transparent);
     right: 0;
     color: white;
     border-radius: 15px;
     width: 70px;
     cursor: pointer;
-
+}
+.book-read-button:hover {
+    background-color: var(--orange);
 }
 p.book-author {
     flex: 1;
-}
-.book-read-button:hover {
-    background-color: #f7b55e;
 }
 .book-delete-button {
     height: 30px;
     width: 30px;
     border-radius: 50%;
     font-weight: bold;
-    border: 2px solid #f7b55e;
-    background-color: #f7b55e63;
+    border: 2px solid var(--orange);
+    background-color: var(--orange-transparent);
     color: white;
     cursor: pointer;
 }
 .book-delete-button:hover {
-    background-color: #f7b55e;
+    background-color: var(--orange);
 }
