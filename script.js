@@ -36,7 +36,8 @@ function addBookToLibrary() {
         bookPages.value = "";
         readCheck.checked = false;
         addBookToDisplay();
-        addBooks.style.display = "none";
+        addBooks.classList.remove("show");
+
     }
 
 }
@@ -136,5 +137,11 @@ books.addEventListener('click', (event) => {
 });
 
 addBookButton.addEventListener('click', ()=> {
-    addBooks.style.display = "flex";
+    addBooks.classList.toggle("show");
+})
+
+addBookButton.addEventListener('transitionend', ()=> {
+    if(!addBooks.classList.contains("show")) {
+        addBooks.style.maxHeight = "0";
+    }
 })
