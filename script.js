@@ -184,7 +184,7 @@ addBookButton.addEventListener('click', ()=> {
     addBooks.classList.toggle("show");
 })
 
-addBookButton.addEventListener('transitionend', ()=> {
+submitButton.addEventListener('transitionend', ()=> {
     if(!addBooks.classList.contains("show")) {
         addBooks.style.maxHeight = "0";
     }
