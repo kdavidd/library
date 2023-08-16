@@ -98,15 +98,13 @@ input[type='checkbox'] {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: max-height 0.1s ease-in-out, opacity 0.1s ease-in-out;
 }
 .books-add.show {
     display: flex;
     max-height: 350px;
     opacity: 1;
 }
-
-
 .books-show {
     padding: 30px 0px;
     display: grid;
@@ -154,8 +152,6 @@ input[type='checkbox'] {
 }
 .book-read-button {
     height: 30px;
-    border: 2px solid var(--orange);
-    background-color: var(--orange-transparent);
     right: 0;
     color: white;
     border-radius: 15px;
@@ -165,6 +161,20 @@ input[type='checkbox'] {
 .book-read-button:hover {
     background-color: var(--orange);
 }
+.book-read-button.read-button {
+    border: 2px solid #58E07E;
+    background-color: #58e07e83;
+}
+.book-read-button.read-button:hover {
+    background-color: #58e07ebd;
+}
+.book-read-button.not-read-button {
+    border: 2px solid var(--orange);
+    background-color: transparent;
+}
+.book-read-button.not-read-button:hover {
+    background-color: #f7b55e81;
+}
 p.book-author {
     flex: 1;
 }
@@ -173,11 +183,13 @@ p.book-author {
     width: 30px;
     border-radius: 50%;
     font-weight: bold;
-    border: 2px solid var(--orange);
+    border: 2px solid #991D1D;
     background-color: var(--orange-transparent);
     color: white;
     cursor: pointer;
 }
 .book-delete-button:hover {
-    background-color: var(--orange);
+    background-color:#991d1d94;
+    border: 2px dashed #991D1D;
+
 }
