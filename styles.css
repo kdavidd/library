@@ -8,7 +8,7 @@
     padding: 0;
 }
 body {
-    background: url(../resources/bg.jpg);
+    background: url(resources/bg.jpg);
 }
 .wrapper {
     padding: 50px;
